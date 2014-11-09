@@ -12,9 +12,10 @@ Template.noteList.helpers({
     }else if(Session.get("isArchive") == false){
       return "Notes...";
     }
+  },
+  noneItems : function(){
   }
 });
-
 Template.noteList.rendered = function(){
   Session.set("isArchive", false);
 };

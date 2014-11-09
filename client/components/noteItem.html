@@ -3,8 +3,11 @@
 		<a href="{{pathFor 'notePage'}}">{{title}}</a>
 	</div>
 	  <div class="swipeout-actions-right">
-    <!-- Add this button and item will be deleted automatically -->
-     <a href="#" class="bg-lightblue swipeout-archive">Archive</a>
+    {{#if isArchive}}
+    <a href="#" class="swipeout-unarchive">Unarchive</a>
+    {{else}}
+    <a href="#" class="bg-lightblue swipeout-archive">Archive</a>
+    {{/if}}
     <a href="#" class="swipeout-delete">Delete</a>
   </div>
 
