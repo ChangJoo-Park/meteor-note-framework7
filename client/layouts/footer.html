@@ -1,7 +1,7 @@
 <template name="footer">
   <div class="toolbar">
     <div class="toolbar-inner">
-      <a href="#" class="link">Link 1</a>
+      <a href="{{pathFor 'aboutMe'}}" class="link"><i class="fa fa-info"></i></a>
       {{#if routeIs "noteList"}}
         <a href="#" class="isArchive"><i class="fa fa-archive"></i></a>
       {{/if}}

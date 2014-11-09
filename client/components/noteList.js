@@ -7,14 +7,14 @@ Template.noteList.helpers({
     }
 	},
   currentState: function(){
-    if(Session.get("isArchive")){
+    if(Session.get("isArchive") == true){
       return "Archive...";
-    }else{
+    }else if(Session.get("isArchive") == false){
       return "Notes...";
     }
   }
 });
 
 Template.noteList.rendered = function(){
-  Session.set("isArchive", "false");
+  Session.set("isArchive", false);
 };
