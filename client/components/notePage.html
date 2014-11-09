@@ -1,9 +1,24 @@
 <template name="notePage">
-<input id="title" name="title" value="{{title}}" type="text">
-<textarea id="description" name="description" cols="30" rows="10" value = "{{description}}"></textarea>
-<div class="bar bar-standard bar-footer">
-  <a class="icon icon-check pull-left complete"></a>
-  <a class="icon icon-trash pull-right remove"></a>
+<div class="list-block no-margin"  style="margin: 0px !important">
+  <ul>
+    <li class="align-top">
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+          <input id="title" type="text" placeholder="Title"  value="{{title}}" style="text-align: center">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="align-top">
+      <div class="item-content content">
+        <div class="item-inner">
+          <div class="item-input full-height" >
+              <textarea id="description" placeholder="Content" style="height: 100%" value = "{{description}}"></textarea>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
-
 </template>

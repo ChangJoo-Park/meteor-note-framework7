@@ -1,29 +1,19 @@
 <template name="noteList">
-<div class="content-block-title">Notes...</div>
+<div class="content-block-title">
+{{currentState}}
+</div>
 <div class="list-block sortable">
     <ul>
     {{#each notes}}
-      <li>
+      <li class="align-top swipeout">
         <div class="item-content">
           <div class="item-media"></div>
           <div class="item-inner">
           {{>noteItem}}
           </div>
         </div>
-        <!-- Sortable handler  -->
-        <div class="sortable-handler"></div>
       </li>
       {{/each}}
     </ul>
 </div>
-
-<!-- <div class="list-block">
-	<ul>
-		
-	<li class="item-content" id="{{_id}}">
-		
-	</li>
-		
-	</ul>
-</div> -->
 </template>

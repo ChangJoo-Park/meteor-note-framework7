@@ -1,9 +1,24 @@
 <template name="noteNew">
-	<input id="title" name="title" value="" type="text">
-	<textarea id="description" name="description" cols="30" rows="10" value = ""></textarea>
-<div class="bar bar-standard bar-footer">
-  <a class="icon icon-check pull-left new"></a>
-  <a class="icon icon-trash pull-right remove"></a>
+<div class="list-block no-margin" style="margin: 0px !important">
+  <ul>
+    <li class="align-top">
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-input">
+          <input id="title" type="text" placeholder="Title" style="text-align: center" value="{{currentDateTime}}">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="align-top">
+      <div class="item-content content">
+        <div class="item-inner">
+          <div class="item-input full-height" >
+              <textarea id="description" autofocus placeholder="Content" style="height: 100%"></textarea>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
-
 </template>

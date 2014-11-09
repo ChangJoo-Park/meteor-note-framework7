@@ -1,16 +1,17 @@
 <template name="titleBar">
 <div class="navbar">
 	<div class="navbar-inner">
-
-    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
     	<div class="left openPanel"><i class="fa fa-bars fa-lg"></i></div>
-    	<div class="center"><a href="{{pathFor 'noteList'}}">Meteor Notes</a></div>
-    	<div class="right openNewNote"><i class="fa fa-pencil-square-o fa-lg"></i>
-</div>
+    	<div class="center"><a class="titleBar">Meteor Notes</a></div>
+      {{#if routeIs "noteList"}}
+      <div class="right openNewNote"><a href=""><i class="fa fa-pencil-square-o fa-lg"></i></a></div>
+      {{/if}}
+      {{#if routeIs "noteNew"}}
+    	<div class="right saveNote"><a href=""><i class="fa fa-check"></i></a></div>
+      {{/if}}
+      {{#if routeIs "notePage"}}
+      <div class="right updateNote"><a href=""><i class="fa fa-check"></i></a></div>
+      {{/if}}
 	</div>
 </div>
-      <!-- 
-        Right link contains only icon - additional "icon-only" class
-        Additional "open-panel" class tells app to open panel when we click on this link
-      -->
 </template>

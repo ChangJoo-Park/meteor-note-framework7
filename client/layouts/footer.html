@@ -1,0 +1,16 @@
+<template name="footer">
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <a href="#" class="link">Link 1</a>
+      {{#if routeIs "noteList"}}
+        <a href="#" class="isArchive"><i class="fa fa-archive"></i></a>
+      {{/if}}
+      {{#if routeIs "notePage"}}
+        <a href="{{pathFor 'noteMark'}}" class="link isPage"><i class="fa fa-eye"></i></a>
+      {{/if}}
+      {{#if routeIs "noteMark"}}
+        <a href="{{pathFor 'notePage'}}" class="link"><i class="fa fa-undo"></i></a>
+      {{/if}}
+    </div>
+  </div>
+</template>
