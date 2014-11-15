@@ -1,10 +1,9 @@
 <template name="titleBar">
 <div class="navbar">
 	<div class="navbar-inner">
-    	<div class="left openPanel"><i class="fa fa-bars fa-lg"></i></div>
     	<div class="center"><a class="titleBar">Meteor Notes</a></div>
       {{#if routeIs "noteList"}}
-      <div class="right openNewNote"><a href=""><i class="fa fa-pencil-square-o fa-lg"></i></a></div>
+      <div class="right sliding openNewNote"><a href="{{pathFor 'noteNew'}}"><i class="fa fa-pencil-square-o fa-lg"></i></a></div>
       {{/if}}
       {{#if routeIs "noteNew"}}
     	<div class="right saveNote"><a href=""><i class="fa fa-check"></i></a></div>

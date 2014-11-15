@@ -10,8 +10,8 @@ Template.titleBar.events({
 	},
 
   'click .openNewNote' : function(e){
-    e.preventDefault();
-		Router.go('noteNew');
+    // e.preventDefault();
+		// Router.go('noteNew');
 	},
 
   'click .saveNote' : function (e) {
